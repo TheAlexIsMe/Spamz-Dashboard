@@ -1,0 +1,141 @@
+:root {
+    --bg-dark: #0e0e10;
+    --bg-panel: #18181b;
+    --text-main: #efeff1;
+    --text-muted: #adadb8;
+    --accent: #9146ff; /* Twitch Purple */
+    --accent-hover: #772ce8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    background-color: var(--bg-panel);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #333;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--accent);
+    margin-bottom: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    flex: 1;
+}
+
+.nav-links li {
+    margin-bottom: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 700;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.nav-links li.active a, .nav-links a:hover {
+    background-color: #26262c;
+    color: var(--text-main);
+    border-left: 4px solid var(--accent);
+}
+
+/* CONTENT */
+.content {
+    flex: 1;
+    padding: 40px;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 32px;
+}
+
+header p {
+    color: var(--text-muted);
+}
+
+/* STATS GRID */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: var(--bg-panel);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #333;
+}
+
+.card h3 {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.card .number {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.purple { border-top: 4px solid var(--accent); }
+.blue { border-top: 4px solid #00d4ff; }
+.green { border-top: 4px solid #00ff88; }
+
+/* TABLE */
+.leaderboard-section {
+    background-color: var(--bg-panel);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #333;
+}
+
+.leaderboard-section h2 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    color: var(--text-muted);
+    font-size: 12px;
+    text-transform: uppercase;
+}
